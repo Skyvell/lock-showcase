@@ -35,6 +35,7 @@ func main() {
 			defer wg.Done()
 
 			err := l.AcquireLockWithRetry(ctx, time.Second*60)
+			defer l.RemoveLockIfOwner(ctx)
 			if err == nil {
 				// Execute code here when lock is acquired.
 				fmt.Printf("Lock: %s aquired lock. Executing:\n", l.LockName)
