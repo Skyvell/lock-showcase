@@ -4,7 +4,7 @@ go 1.21.0
 
 require (
 	github.com/aws/aws-sdk-go-v2/config v1.18.37
-	github.com/skyvell/s3lock v1.0.1
+	github.com/skyvell/locksv2 v1.0.1
 )
 
 require (
